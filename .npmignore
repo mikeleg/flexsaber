@@ -1,0 +1,5 @@
+src/
+demo/
+.vscode/
+*.ts
+*.map

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexsaber Demo</title>
+  <script type="module" src="../dist/flexsaber.js"></script>
+  <link rel="icon" href="../logo.png" />
+  <style>
+    fx-container {
+      height: 100vh;
+      background: #f5f5f5;
+    }
+    fx-item {
+      background: #90caf9;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <fx-container spacing="24" scroll>
+    <fx-row gap="16" wrap align="center" justify="start">
+      <fx-item size="200px">Item 1</fx-item>
+      <fx-item size="200px">Item 2</fx-item>
+      <fx-item size="200px">Item 3</fx-item>
+      <fx-item size="200px">Item 4</fx-item>
+    </fx-row>
+  </fx-container>
+</body>
+</html>
