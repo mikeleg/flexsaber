@@ -22,11 +22,11 @@ jobs:
           run: dotnet tool install GitVersion.Tool
 
       - name: Determine Version
-        id: gitversion
-        shell: pwsh
-        run: |
-          $version = (GitVersion.exe | ConvertFrom-Json).FullSemVer
-          echo "fullSemVer=$version" >> $env:GITHUB_OUTPUT
+          id: gitversion
+          shell: pwsh
+          run: |
+            $version = (GitVersion.exe | ConvertFrom-Json).FullSemVer
+            echo "fullSemVer=$version" >> $env:GITHUB_OUTPUT
 
       - name: Install NPM Packages
         shell: pwsh
