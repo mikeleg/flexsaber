@@ -19,14 +19,14 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Install GitVersion
-        run: dotnet tool install GitVersion.Tool -g
+        uses: gittools/actions/gitversion/setup
 
       - name: Determine Version
         id: gitversion
-        shell: pwsh
-        run: |
-          $version = (gitversion | ConvertFrom-Json).FullSemVer
-          echo "fullSemVer=$version" >> $env:GITHUB_OUTPUT
+        uses: gittools/actions/gitversion/execute
+        with:
+          useConfigFile: true
+          configFilePath: GitVersion.yml
 
       - name: Install NPM Packages
         shell: pwsh
