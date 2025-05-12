@@ -5,7 +5,7 @@ export default defineConfig({
     outDir: 'dist', // Set the build output directory to 'dist'
     lib: {
       entry: 'src/main.ts',
-      name: 'Flexsaber',
+      name: 'flexsaber',
       fileName: (format) => `flexsaber.${format}.js`,
     },
     rollupOptions: {
