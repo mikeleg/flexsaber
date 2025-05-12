@@ -41,7 +41,8 @@ jobs:
 
       - name: Publish to NPM
         shell: pwsh
-        run: npm publish --tag ${{ steps.gitversion.outputs.fullSemVer }} --access public
+        run: |
+          npm version ${{ steps.gitversion.outputs.fullSemVer }} --no-git-tag-version
+          npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          VERSION: ${{ env.VERSION }}
