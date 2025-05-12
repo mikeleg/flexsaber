@@ -25,7 +25,7 @@ jobs:
         id: gitversion
         shell: pwsh
         run: |
-          $version = (GitVersion.exe | ConvertFrom-Json).FullSemVer
+          $version = (gitversion | ConvertFrom-Json).FullSemVer
           echo "fullSemVer=$version" >> $env:GITHUB_OUTPUT
 
       - name: Install NPM Packages
