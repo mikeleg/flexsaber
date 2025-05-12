@@ -1,4 +1,5 @@
 {
+  "name": "flexsaber",
   "scripts": {
     "build": "vite build"
   },
