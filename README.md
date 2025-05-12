@@ -1,4 +1,5 @@
 # Flexsaber
+[![Build](https://github.com/mikeleg/flexsaber/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/mikeleg/flexsaber/actions?query=workflow%3A%22Build%22)
 
 ![Flexsaber Logo](./logo.png)
 
