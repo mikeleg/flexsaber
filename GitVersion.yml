@@ -3,7 +3,7 @@ branches:
   main:
     label: beta
     increment: Minor
-    regex: ^main?
+    regex: ^main$
     is-main-branch: true
     source-branches: []
   pull-request:
