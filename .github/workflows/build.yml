@@ -40,10 +40,14 @@ jobs:
         run: npm run build
 
       - name: Publish to NPM
-        if: startsWith(github.ref, 'refs/tags/')
         shell: pwsh
         run: |
           npm version ${{ steps.gitversion.outputs.fullSemVer }} --no-git-tag-version
-          npm publish --access public
+
+          if ("${{ github.ref_type }}" -eq "tag") {
+            npm publish --access public
+          } else {
+            npm publish --tag prerelese --access public
+          }
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
