@@ -47,7 +47,7 @@ jobs:
           if ("${{ github.ref_type }}" -eq "tag") {
             npm publish --access public
           } else {
-            npm publish --tag prerelese --access public
+            npm publish --tag prerelease --access public
           }
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
