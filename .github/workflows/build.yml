@@ -44,6 +44,8 @@ jobs:
         run: |
           npm version ${{ steps.gitversion.outputs.fullSemVer }} --no-git-tag-version
 
+          Write-Host "${{ secrets.NPM_TOKEN }}".Length
+
           if ("${{ github.ref_type }}" -eq "tag") {
             npm publish --access public
           } else {
