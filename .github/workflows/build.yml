@@ -47,7 +47,7 @@ jobs:
       - name: Publish to NPM
         shell: pwsh
         run: |
-          Write-Host "$NODE_AUTH_TOKEN".Length
+          Write-Host "$($env:NODE_AUTH_TOKEN)".Length
 
           if ("${{ github.ref_type }}" -eq "tag") {
             npm publish --access public
