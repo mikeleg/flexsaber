@@ -39,12 +39,15 @@ jobs:
         shell: pwsh
         run: npm run build
 
-      - name: Publish to NPM
+      - name: Run NPM verision
         shell: pwsh
         run: |
           npm version ${{ steps.gitversion.outputs.fullSemVer }} --no-git-tag-version
 
-          Write-Host "${{ secrets.NPM_TOKEN }}".Length
+      - name: Publish to NPM
+        shell: pwsh
+        run: |
+          Write-Host "$NODE_AUTH_TOKEN".Length
 
           if ("${{ github.ref_type }}" -eq "tag") {
             npm publish --access public
