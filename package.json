@@ -1,9 +1,36 @@
 {
-  "name": "flexsaber",
+  "name": "@mikeleg/flexsaber",
   "scripts": {
     "build": "vite build"
   },
   "dependencies": {
     "vite": "^6.3.5"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Flexsaber is a declarative Web Components library for building flexible layouts using Flexbox. Designed to work in plain HTML, frontend frameworks, or no-code environments. Precise, modular, and powerful like a lightsaber.\",",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikeleg/flexsaber.git"
+  },
+  "keywords": [
+    "html",
+    "frontend",
+    "web-components",
+    "flexbox",
+    "ui-library"
+  ],
+  "author": "<mikeleg> (https://github.com/mikeleg)",
+  "contributors": [
+    {
+      "name": "davide-pi",
+      "url": "https://github.com/davide-pi"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikeleg/flexsaber/issues"
+  },
+  "homepage": "https://github.com/mikeleg/flexsaber#readme"
 }
