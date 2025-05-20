@@ -31,6 +31,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
           scope: '@mikeleg'
           always-auth: true
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install GitVersion
         uses: gittools/actions/gitversion/setup@v3.2.1
