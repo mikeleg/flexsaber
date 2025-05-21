@@ -54,11 +54,7 @@ jobs:
       - name: Publish to NPM (tag)
         if: github.ref_type == 'tag'
         run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to NPM (prerelease)
         if: github.ref_type != 'tag'
         run: npm publish --access public --tag prerelease
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
